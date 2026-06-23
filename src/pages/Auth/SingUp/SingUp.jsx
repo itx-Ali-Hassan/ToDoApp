@@ -19,8 +19,8 @@ const AuthSingUp = () => {
           <Title level={2} className="text-center">Sign Up</Title>
           <Form layout="vertical" className="w-full">
             <Col span={24}>
-              <Item label="Username">
-                <Input placeholder="Username" required variant="underlined" />
+              <Item label="Email">
+                <Input placeholder="Email" type="email" required variant="underlined" />
               </Item>
             </Col>
             <Col span={24}>
@@ -34,7 +34,7 @@ const AuthSingUp = () => {
               </Item>
             </Col>
           </Form>
-          <button className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Sign Up</button>
+          <button className="cursor-pointer w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Sign Up</button>
           <div className="flex justify-center items-center space-x-2">
             <p>Already have an account?</p>
             <Link to="/auth/sign-in" className="text-blue-600 hover:underline">Sign In</Link>
