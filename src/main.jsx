@@ -1,11 +1,13 @@
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import AppProvider from "./context/AppProvider";
 import './index.css'
 import App from './App.jsx'
-import { ConfigConsumer } from 'antd/es/config-provider'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </BrowserRouter >
 )

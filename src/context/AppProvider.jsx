@@ -2,11 +2,11 @@ import { createContext, useState } from "react"
 
 export const AppContext = createContext()
 
-const AppProvider = () => {
-    const [auth, setAuth] = useState(false)
+const AppProvider = ({ children }) => {
+  const [auth, setAuth] = useState(false)
   return (
     <AppContext.Provider value={{ auth, setAuth }}>
-      <div>AppProvider</div>
+      {children}
     </AppContext.Provider>
   )
 }
